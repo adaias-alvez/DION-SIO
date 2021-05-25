@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(87, 165, 255);
+}
+.coiso1,
+.coiso2,
+.coiso3
+{
+    position: absolute;
+    height: 500px;
+    background: #f2f3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-bottom: 30px;
+}
+.coiso2,
+.coiso3{
+    z-index: -2;
+}
+.coiso1{
+    width: 400px;
+    z-index: 1;
+}
+.coiso2{
+    width: 380px;
+    margin-bottom: -50px;
+    opacity: .7;
+}
+.coiso3{
+    margin-bottom: -90px;
+    width: 360px;
+    opacity: .4;
+}
+
+button{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #f2f3ff;
+    border-radius: 50%;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button .fa,
+button .fa
+{
+    font-size: 35px;
+    position: absolute;
+}
+button:nth-child(1) .fa{
+    color: #ff4665;
+}
+button:nth-child(2) .fa{
+    color: #5a99ff;
+}
+button:nth-child(1){
+    right: -235px;
+    border: 3px solid #ff4665;
+    box-shadow: 0 0 4px #ff123a;
+}
+button:nth-child(2){
+    left: -235px;
+    border: 3px solid #5a99ff;
+    box-shadow: 0 0 4px #2579ff;
+}
+button:nth-child(2)
+{
+    animation: upp 1s infinite alternate;
+}
+button:nth-child(1){
+    animation: upp2 1s .2s infinite alternate;
+}
+@keyframes upp {
+    0%{
+        margin-bottom: -20px;
+    }
+    100%{
+        margin-bottom: 20px;
+    }
+}
+@keyframes upp2 {
+    0%{
+        margin-bottom: -20px;
+    }
+    100%{
+        margin-bottom: 20px;
+    }
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 145px;
+    height: 300px;
+    background: #ff9f0f;
+    border-radius: 100px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    box-shadow: inset -8px 8px #ffb03b,
+                inset 8px -8px #dd8e17;
+}
+.body .auau,
+.body .auau2
+{
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+    color: #3f3f3faf;
+    opacity: 0;
+    z-index: -12
+}
+.auau{
+    transform: rotate(-55deg) translate(-40px, -70px);
+    transition: .3s;
+}
+.body:hover .auau{
+    animation: auau4 .3s 0s 1 linear;
+}
+@keyframes auau4 {
+    100%{
+    transform: rotate(-55deg) translate(-23px, -140px);
+    }
+    50%{
+        opacity: 1;
+        z-index: 4;
+    }
+}
+.auau2{
+    transform: rotate(55deg) translate(55px, -30px);
+}
+.body:hover .auau2{
+    animation: auau5 .3s .3s 1 linear
+}
+@keyframes auau5 {
+    100%{
+    transform: rotate(55deg) translate(20px, -160px);
+    }
+    50%{
+        opacity: 1;
+        z-index: 4;
+    }
+}
+.body:hover .boca3{
+    animation: auau .3s 0s 2 linear;
+}
+@keyframes auau {
+    0%{
+        height: 28px;
+    }
+}
+.body:hover .barriga{
+    animation: auau2 .3s 0s 2 linear
+}
+@keyframes auau2 {
+    0%{
+        height: 260px
+    }
+}
+.body:hover .eye,
+.body:hover .eye2
+{
+    animation: auau3 .3s 0s 2 linear;
+}
+.eye .lagrima{
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border-bottom-left-radius: 10%;
+    background: #fff;
+    left: -5px;
+    bottom: -5px;
+    opacity: 0;
+    transform: rotate(180deg)
+}
+.dislike:hover ~ .coiso1 .lagrima{
+    opacity: 1;
+}
+@keyframes auau3 {
+    0%{
+        margin-top: -5px;
+    }
+}
+.body::before{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    width: 300px;
+    height: 40px;
+    background: rgba(119, 119, 119, 0.15);
+    border-radius: 50%;
+}
+.body .barriga{
+    position: absolute;
+    bottom: 0;
+    width: 78px;
+    height: 250px;
+    background: #eff7ff;
+    border-radius: 100px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: inset -2px 2px 4px #c1d9f1,
+                inset 3px 0px 4px #b1c6db;
+}
+.barriga::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 20px;
+    background: #eff7ff;
+    border-radius: 100px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    top: -18px;
+    left: 31px;
+    box-shadow: inset -3px 0px 3px #d6e9fc,
+                inset 3px 0px 3px #b1c6db;
+}
+.barriga::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #eff7ffd8;
+    border-radius: 100px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    top: -2px;
+}
+.body .coleira{
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    margin-bottom: 35px;
+    background: rgb(143, 188, 255);
+    border-top: #00000065 3.3px solid;
+    border-bottom: #0000008f 3.3px solid;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coleira::before{
+    content: 'Dionísio';
+    font-size: 5px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: solid 2px #d6e9fc;
+    background: rgb(255, 82, 82);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 8px;
+    color: rgb(217, 214, 255);
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.coleira::after{
+    content: '';
+    position: absolute;
+    width: 4px;height: 5px;
+    background: #d6e9fc;
+    top: 3px;
+}
+.body .eye,
+.body .eye2{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #2c2c3b;
+    top: 40px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eye{
+    left: 31px;
+}
+.eye2{
+    right: 31px;
+}
+.barriga .nariz{
+    position: absolute;
+    width: 20px;
+    height: 11px;
+    background: #2c2c3b;
+    border-radius: 5px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    top: 15px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nariz:before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    background: #2c2c3b;
+    bottom: -5px;
+    left: 7px
+}
+.barriga .nariz2,
+.barriga .nariz3
+{
+    position: absolute;
+    width: 20px;
+    height: 8px;
+    border: 2px solid #eff7ff;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-radius: 100px;
+    top: 22px;
+    transition: 0.3s;
+}
+.nariz2{
+    right: 15px;
+    transform: rotate(180deg);
+}
+.nariz3{
+    left: 15px;
+    transform: rotatex(180deg);
+}
+.like:hover ~ .coiso1 .nariz2,
+.like:hover ~ .coiso1 .nariz3
+{
+    top: 17px;
+}
+.barriga .boca,
+.barriga .boca2{
+    position: absolute;
+    width: 16px;
+    height: 12px;
+    border-radius: 100px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border: solid 3px #2c2c3b;
+    background: #eff7ff;
+    border-top: 0px;
+    top: 30px;
+    transition: 0.3s;
+    z-index: 12;
+}
+.boca2::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 4px;
+    border-radius: 100px;
+    border: solid 3px #c4d9f088;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top: 0px;
+    bottom: -20px;
+    left: -10px;
+}
+.like:hover ~ .coiso1 .boca2:before{
+    opacity: 0;
+}
+.boca3{
+    position: absolute;
+    width: 18px;
+    height: 0px;
+    border-radius: 100px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background: #2c2c3b;
+    transition: 0.5s;
+    z-index: 10;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boca3 .lingua{
+    position: absolute;
+    width: 10px;
+    height: 0px;
+    background: #ff2957;
+    border-radius: 100px;
+    top: 2px;
+    transition: 0.3s 0.3s;
+    opacity: 0;
+    box-shadow: inset -2px -2px #ff7291;
+}
+.like:hover ~ .coiso1 .lingua{
+    height: 22px;
+    opacity: 1;
+    top: 6px;
+    animation: 0.1s feliz linear infinite alternate;
+}
+@keyframes feliz {
+    100%{
+        height: 26px;
+    }
+}
+.like:hover ~ .coiso1 .boca3{
+    height: 23px;
+}
+.boca{
+    left: 23px
+}
+.boca2{
+    right: 23px
+}
+.body .orelha,
+.body .orelha2{
+    position: absolute;
+    width: 45px;
+    height: 100px;
+    border-radius: 50%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background: #ff9f0f;
+    top: -26px;
+    transition: .5s .2s;
+    z-index: -1;
+    box-shadow: inset -8px 8px #ffb03b,
+                inset 8px 8px #dd8e17;
+}
+.orelha::before,
+.orelha2::before
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 35px;
+    height: 80px;
+    border-radius: 50%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background: #d68100;
+    content: '';
+    left: 6px;
+    bottom: 8px;
+}
+.orelha{
+    left: 0px
+}
+.orelha2{
+    right: 0px
+}
+.body .feet,
+.body .feet2
+{
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background: #ff9f0f;
+    border-radius: 16px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    bottom: 0;
+}
+.feet{
+    right: -20px;
+    box-shadow: inset -6px 4px #ffb03b;
+}
+.feet2{
+    left: -20px;
+    transform: rotatey(-180deg);
+    box-shadow: inset -6px 4px #dd8e17;
+}
+.body .feet::before,
+.body .feet2::before{
+    content: '';
+    width: 16px;
+    height: 35px;
+    background: #ff9f0f;
+    position: absolute;
+    bottom: 0;
+}
+.feet::before{
+    left: -3px;
+}
+.feet2::before{
+    left: -4px;
+}
+.body .backfeet,
+.body .backfeet2
+{
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background: #d68100;
+    border-radius: 50%;
+    z-index: -1;
+    bottom: 16px;
+}
+.backfeet{
+    left: -20px;
+    transform: rotate(-45deg);
+    box-shadow: inset 5px 3px #b9740b;
+}
+.backfeet2{
+    right: -20px;
+    transform: rotate(45deg);
+    box-shadow: inset -5px 3px #da8505;
+}
+.backfeet::before,
+.backfeet2::before
+{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background: #d68100;
+    bottom: 10px;
+}
+.backfeet2::before{
+    left: 45px;
+    transform: rotate(-45deg);
+    border-radius: 16px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    box-shadow: inset -4px 3px #da8505;
+}
+.backfeet::before{
+    right: 45px;
+    transform: rotate(45deg);
+    border-radius: 16px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    box-shadow: inset 4px 3px #b9740b;
+}
+.body .rabo{
+    position: absolute;
+    left: -15px;
+    bottom: 25px;
+    background: #eb8f06;
+    width: 15px;transition: .5s .3s;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: inset -5px 2px #ffb03b,
+                inset 4px -4px #ac6b09;
+    z-index: -2;
+    transform: rotate(-30deg)
+}
+.like:hover ~ .coiso1 .rabo{
+    animation: rabof .1s infinite alternate;
+}
+@keyframes rabof {
+    0%{
+        bottom: 10px;
+        transform: rotate(-60deg)
+    }
+}
+.like:hover ~ .coiso1 .eye,
+.like:hover ~ .coiso1 .eye2
+{
+    top: 35px;
+    transform: scale(1.1)
+}
+.like:hover ~ .coiso1 .nariz{
+    top: 10px;
+}
+.like:hover ~ .coiso1 .boca,
+.like:hover ~ .coiso1 .boca2
+{
+    top: 25px;
+} 
+.eye::before,
+.eye2::before
+{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 3px;
+    left: 3px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+@keyframes brilhoeye {
+    0%{
+        width: 3px;
+        height: 3px;
+    }
+    100%{
+        width: 5px;
+        height: 5px;
+    }
+}
+@keyframes brilhoeye2 {
+    0%{
+        width: 2px;
+        height: 2px;
+    }
+    100%{
+        width: 3px;
+        height: 3px;
+    }
+}
+
+.eye::after,
+.eye2::after
+{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 8px;
+    left: 8px;
+    background: #fff;
+    border-radius: 50%;
+}
+.like:hover ~ .coiso1 .eye2::after,
+.like:hover ~ .coiso1 .eye::after{
+    animation: brilhoeye2 0.1s infinite alternate;
+}
+.like:hover ~ .coiso1 .eye2::before,
+.like:hover ~ .coiso1 .eye::before{
+    animation: brilhoeye 0.1s infinite alternate;
+}
+.like:hover ~ .coiso1 .barriga{
+    height: 255px
+}
+
+.dislike:hover ~ .coiso1 .eye,
+.dislike:hover ~ .coiso1 .eye2
+{
+    height: 5px;
+    width: 20px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+.dislike:hover ~ .coiso1 .eye{
+    transform: rotate(-45deg)
+}
+.dislike:hover ~ .coiso1 .eye2{
+    transform: rotate(45deg)
+}
+.dislike:hover ~ .coiso1 .barriga{
+    height: 243px;
+}
+.dislike:hover ~ .coiso1 .orelha{
+    transform: rotate(-15deg) translate(-10px, 10px);
+}
+.dislike:hover ~ .coiso1 .orelha2{
+    transform: rotate(15deg) translate(10px, 10px);
+}
+.dislike:hover ~ .coiso1 .rabo{
+    transform: rotate(-90deg) translate(-45px, -20px)
+}
+
+@media (max-width: 480px) {
+    body{
+        transform: scale(.9)
+    }
+}
