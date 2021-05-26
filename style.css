@@ -9,7 +9,6 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(87, 165, 255);
 }
 .coiso1,
 .coiso2,
@@ -23,6 +22,7 @@ body{
     align-items: center;
     border-radius: 40px;
     margin-bottom: 30px;
+    transition: .5s;
 }
 .coiso2,
 .coiso3{
@@ -35,7 +35,7 @@ body{
 .coiso2{
     width: 380px;
     margin-bottom: -50px;
-    opacity: .7;
+    opacity: .6;
 }
 .coiso3{
     margin-bottom: -90px;
@@ -51,6 +51,7 @@ button{
     border-radius: 50%;
     z-index: 50;
     display: flex;
+    transition: .5s;
     justify-content: center;
     align-items: center;
 }
@@ -59,6 +60,20 @@ button .fa
 {
     font-size: 35px;
     position: absolute;
+}
+.dislike:before{
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 5px;
+    background: #5a99ff;
+    z-index: 3;
+    box-shadow: inset 0 1.5px #f2f3ff,
+                inset 0 -1.5px #f2f3ff;
+    transform: rotate(35deg) translate(-2px);
+}
+button:hover{
+    transform: scale(1.1);
 }
 button:nth-child(1) .fa{
     color: #ff4665;
@@ -81,7 +96,7 @@ button:nth-child(2)
     animation: upp 1s infinite alternate;
 }
 button:nth-child(1){
-    animation: upp2 1s .2s infinite alternate;
+    animation: upp2 1s .3s infinite alternate;
 }
 @keyframes upp {
     0%{
@@ -97,6 +112,154 @@ button:nth-child(1){
     }
     100%{
         margin-bottom: 20px;
+    }
+}
+button .hover1,
+button .hover2,
+button .hover3,
+button .hover4
+{
+    position: absolute;
+    width: 6px;
+    height: 20px;
+    border-radius: 100px;
+    z-index: -1;
+}
+button .hover5,
+button .hover6,
+button .hover7,
+button .hover8
+{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: solid 2px #2579ff;
+    z-index: -1;
+}
+button:hover .hover5{
+    animation: hh5 1s infinite;
+}
+@keyframes hh5 {
+    100%{
+        transform: translate(70px);
+        width: 10px;
+        height: 10px;
+        opacity: 0;
+    }
+    50%{
+        width: 20px;
+        height: 20px
+    }
+}
+button:hover .hover6{
+    animation: hh6 1s infinite;
+}
+@keyframes hh6 {
+    100%{
+        transform: translate(-70px);
+        width: 10px;
+        height: 10px;opacity: 0;
+    }
+    50%{
+        width: 20px;
+        height: 20px
+    }
+}
+button:hover .hover7{
+    animation: hh7 1s infinite;
+}
+@keyframes hh7 {
+    100%{
+        transform: translatey(-70px);
+        width: 10px;
+        height: 10px;opacity: 0;
+    }
+    50%{
+        width: 20px;
+        height: 20px
+    }
+}
+button:hover .hover8{
+    animation: hh8 1s infinite;
+}
+@keyframes hh8 {
+    100%{
+        transform: translatey(70px);
+        width: 10px;
+        height: 10px;opacity: 0;
+    }
+    50%{
+        width: 20px;
+        height: 20px
+    }
+}
+button:nth-child(1) .hover1,
+button:nth-child(1) .hover2,
+button:nth-child(1) .hover3,
+button:nth-child(1) .hover4
+{
+    background: #ff2d50;   
+}
+button:nth-child(2) .hover1,
+button:nth-child(2) .hover2,
+button:nth-child(2) .hover3,
+button:nth-child(2) .hover4
+{
+    background: rgb(99, 115, 255);   
+}
+button:nth-child(2) .hover5,
+button:nth-child(2) .hover6,
+button:nth-child(2) .hover7,
+button:nth-child(2) .hover8
+{
+    border: solid 2px #ff2d50;   
+}
+button .hover1,
+button .hover2
+{
+    transform: rotate(45deg);
+}
+button:hover .hover1{
+    animation: hh 1s infinite;
+}
+@keyframes hh {
+    100%{
+        height: 10px;opacity: 0;
+        transform: translate(53px, -50px) rotate(45deg);
+    }
+}
+button:hover .hover2{
+    animation: hh2 1s infinite;
+}
+@keyframes hh2 {
+    100%{
+        height: 10px;opacity: 0;
+        transform: translate(-53px, 50px) rotate(45deg);
+    }
+}
+
+button .hover3,
+button .hover4
+{
+    transform: rotate(-47deg);
+}
+button:hover .hover3{
+    animation: hh3 1s infinite;
+}
+@keyframes hh3 {
+    100%{
+        height: 10px;opacity: 0;
+        transform: translate(53px, 50px) rotate(-47deg);
+    }
+}
+button:hover .hover4{
+    animation: hh4 1s infinite;
+}
+@keyframes hh4 {
+    100%{
+        height: 10px;opacity: 0;
+        transform: translate(-53px, -50px) rotate(-47deg);
     }
 }
 .body{
@@ -215,7 +378,6 @@ button:nth-child(1){
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     transition: .5s;
     box-shadow: inset -2px 2px 4px #c1d9f1,
                 inset 3px 0px 4px #b1c6db;
@@ -250,9 +412,11 @@ button:nth-child(1){
     width: 100%;
     height: 15px;
     margin-bottom: 35px;
-    background: rgb(143, 188, 255);
+    background: #8fbcff;
     border-top: #00000065 3.3px solid;
     border-bottom: #0000008f 3.3px solid;
+    box-shadow: inset -8px 0 #c0d9ff,
+                inset 8px 0 #60a0ff;
     z-index: 3;
     display: flex;
     justify-content: center;
@@ -521,7 +685,7 @@ button:nth-child(1){
 .backfeet2{
     right: -20px;
     transform: rotate(45deg);
-    box-shadow: inset -5px 3px #da8505;
+    box-shadow: inset -5px 3px #f59300;
 }
 .backfeet::before,
 .backfeet2::before
@@ -540,7 +704,7 @@ button:nth-child(1){
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 0px;
-    box-shadow: inset -4px 3px #da8505;
+    box-shadow: inset -4px 3px #f59300;
 }
 .backfeet::before{
     right: 45px;
@@ -670,6 +834,20 @@ button:nth-child(1){
 }
 .dislike:hover ~ .coiso1 .rabo{
     transform: rotate(-90deg) translate(-45px, -20px)
+}
+.dislike:hover ~ .background{
+    background: #5a99ff;
+}
+.like:hover ~ .background{
+    background: #ff4564;
+}
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -50;
+    transition: .5s;
+    background: rgb(217, 201, 253);
 }
 
 @media (max-width: 480px) {
