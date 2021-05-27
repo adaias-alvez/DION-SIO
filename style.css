@@ -9,6 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 .coiso1,
 .coiso2,
@@ -289,7 +290,7 @@ button:hover .hover4{
     transform: rotate(-55deg) translate(-40px, -70px);
     transition: .3s;
 }
-.body:hover .auau{
+.body.action .auau{
     animation: auau4 .3s 0s 1 linear;
 }
 @keyframes auau4 {
@@ -304,7 +305,7 @@ button:hover .hover4{
 .auau2{
     transform: rotate(55deg) translate(55px, -30px);
 }
-.body:hover .auau2{
+.body.action .auau2{
     animation: auau5 .3s .3s 1 linear
 }
 @keyframes auau5 {
@@ -316,7 +317,7 @@ button:hover .hover4{
         z-index: 4;
     }
 }
-.body:hover .boca3{
+.body.action .boca3{
     animation: auau .3s 0s 2 linear;
 }
 @keyframes auau {
@@ -324,7 +325,7 @@ button:hover .hover4{
         height: 28px;
     }
 }
-.body:hover .barriga{
+.body.action .barriga{
     animation: auau2 .3s 0s 2 linear
 }
 @keyframes auau2 {
@@ -332,8 +333,8 @@ button:hover .hover4{
         height: 260px
     }
 }
-.body:hover .eye,
-.body:hover .eye2
+.body.action .eye,
+.body.action .eye2
 {
     animation: auau3 .3s 0s 2 linear;
 }
@@ -853,5 +854,8 @@ button:hover .hover4{
 @media (max-width: 480px) {
     body{
         transform: scale(.7)
+    }
+    .coleira::before{
+        font-size: 2px
     }
 }
